@@ -34,9 +34,9 @@ syntax match recipeTemperatureAmount "\d\+" contained
 syntax match recipeTemperatureUnit "°C" contained
 
 " Durations
-syntax match recipeDuration "\d\+\s*\(min\|h\)\>" contains=recipeDurationAmount,recipeDurationUnit
+syntax match recipeDuration "\d\+\s*\(min\|h\|Stunden\?\|Minuten\?\)\>" contains=recipeDurationAmount,recipeDurationUnit
 syntax match recipeDurationAmount "\d\+" contained
-syntax match recipeDurationUnit "\(min\|h\)\>" contained
+syntax match recipeDurationUnit "\(min\|h\|Stunden\?\|Minuten\?\)\>" contained
 
 " Define highlight links
 highlight link recipeTitle Title
