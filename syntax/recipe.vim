@@ -13,7 +13,8 @@ syntax match recipeMetaKey "^\(servings\|tags\|url\):" contained
 syntax match recipeServingsNumber "\d\+" contained
 
 " Section headers (captions)
-syntax match recipeCaption "\S.*\n---$" contains=recipeHline
+syntax match recipeCaption "^#\s.\+"
+syntax match recipeCaption1 "\S.*\n---$" contains=recipeHline
 syntax match recipeHline "^---$" contained
 
 " Ingredients (with various formats)
@@ -44,6 +45,7 @@ highlight link recipeMeta Normal
 highlight link recipeMetaKey Comment
 highlight link recipeServingsNumber Number
 highlight link recipeCaption Title
+highlight link recipeCaption1 Title
 highlight link recipeHline Special
 highlight link recipeIngredient String
 highlight link recipeIngredientAmount Constant
